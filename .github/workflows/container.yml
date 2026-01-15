@@ -17,3 +17,12 @@ jobs:
 
       - name: Run Hello World Docker Container
         run: docker run --rm hello-world
+
+  container-job:
+    runs-on: ubuntu-latest
+    container:
+      image: alpine:latest
+
+    steps:
+      - name: Say Hello
+        run: echo "Hello from inside Alpine container!"
