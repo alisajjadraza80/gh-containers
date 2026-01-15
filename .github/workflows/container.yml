@@ -19,6 +19,7 @@ jobs:
         run: docker run --rm hello-world
 
   container-job:
+    needs: hello-world
     runs-on: ubuntu-latest
     container:
       image: alpine:latest
